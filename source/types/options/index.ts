@@ -1,4 +1,4 @@
-import { DeepPartial } from 'ts-essentials';
+import { DeepPartial } from '../deep-partial';
 import { Palette } from '../palette';
 
 /**
