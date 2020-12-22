@@ -1,4 +1,4 @@
-import { Options, InternalOptions } from '@/types/options';
+import { Options, InternalOptions } from '../types/options';
 
 const DEFAULT_OPTIONS: InternalOptions = {
     palette: {

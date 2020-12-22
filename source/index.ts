@@ -1,4 +1,2 @@
-import 'module-alias/register';
-
-export * from '@/types';
-export * from '@/utils/logger';
+export * from './types';
+export * from './utils/logger';

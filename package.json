@@ -1,6 +1,6 @@
 {
   "name": "euberlog",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "A beautiful nodejs logger",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -54,8 +54,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "_moduleAliases": {
-    "@": "dist"
   }
 }

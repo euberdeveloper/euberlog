@@ -1,5 +1,5 @@
-import { Palette } from '@/types/palette';
-import { Options } from '@/types/options';
+import { Palette } from '../types/palette';
+import { Options } from '../types/options';
 
 import { handleOptions } from './options';
 import { colour } from './colour';
