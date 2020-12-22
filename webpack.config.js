@@ -1,8 +1,8 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     target: 'node',
-    devtool: 'inline-source-map',
     entry: {
         index: './source/index.ts',
     },
@@ -22,6 +22,7 @@ module.exports = {
             }
         ]
     },
+    externals: [nodeExternals()],
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'index.js',
