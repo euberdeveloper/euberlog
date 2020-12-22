@@ -1,12 +1,11 @@
 {
   "name": "euberlog",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A beautiful nodejs logger",
   "main": "bundled/index.js",
   "types": "bundled/index.d.ts",
   "files": [
     "package.json",
-    "package-lock.json",
     "bundled",
     "README.md",
     "LICENSE"
