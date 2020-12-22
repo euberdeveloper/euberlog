@@ -12,12 +12,15 @@
   ],
   "scripts": {
     "clean": "shx rm -rf dist bundled",
-    "transpile": "npm run clean && tsc -p source",
-    "bundle": "npm run clean && webpack",
+    "pretranspile": "npm run clean",
+    "prebundle": "npm run clean",
+    "transpile": "tsc -p source",
+    "bundle": "webpack",
     "lint": "eslint source/**/*.ts --format codeframe",
     "lint:fix": "eslint --fix source/**/*.ts --format codeframe",
     "commit": "git-cz",
-    "commit:sign": "git-cz -S"
+    "commit:sign": "git-cz -S",
+    "prepublishOnly": "npm run bundle"
   },
   "repository": {
     "type": "git",
