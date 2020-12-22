@@ -1,6 +1,6 @@
 {
   "name": "euberlog",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A beautiful nodejs logger",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,19 +35,18 @@
     "url": "https://github.com/euberdeveloper/euberlog/issues"
   },
   "homepage": "https://github.com/euberdeveloper/euberlog#readme",
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "module-alias": "^2.2.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@euberdeveloper/eslint-config-typescript": "^4.5.0",
     "@types/module-alias": "^2.0.0",
     "@types/node": "^14.14.14",
+    "chalk": "^4.1.0",
     "commitizen": "^4.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
+    "module-alias": "^2.2.2",
     "prettier": "^2.2.1",
     "shx": "^0.3.3",
     "ts-loader": "^8.0.12",
