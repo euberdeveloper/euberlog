@@ -1,18 +1,18 @@
 {
   "name": "euberlog",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A beautiful nodejs logger",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "bundled/index.js",
+  "types": "bundled/index.d.ts",
   "files": [
     "package.json",
     "package-lock.json",
-    "dist",
+    "bundled",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "clean": "shx rm -rf dist",
+    "clean": "shx rm -rf dist bundled",
     "transpile": "npm run clean && tsc -p source",
     "bundle": "npm run clean && webpack",
     "lint": "eslint source/**/*.ts --format codeframe",
@@ -46,6 +46,7 @@
     "commitizen": "^4.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "dts-bundle": "^0.7.3",
+    "dts-bundle-webpack": "^1.0.2",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",

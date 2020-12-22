@@ -1,6 +1,8 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const TerserPlugin = require('terser-webpack-plugin');
+const DtsBundleWebpack = require('dts-bundle-webpack')
+
 
 module.exports = {
     target: 'node',
@@ -23,6 +25,13 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new DtsBundleWebpack({
+            name: 'euberlog',
+            main: 'dist/index.d.ts',
+            out: '../bundled/index.d.ts'
+        })
+      ],
     externals: [nodeExternals()],
     optimization: {
         minimizer: [
@@ -30,7 +39,7 @@ module.exports = {
         ]
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './bundled'),
         filename: 'index.js',
         library: 'euberlog',
         libraryTarget: 'umd',
