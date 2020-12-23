@@ -21,27 +21,27 @@ const DEFAULT_OPTIONS: InternalOptions = {
     scope: null
 };
 
-export function handleOptions(options: Options | string): InternalOptions {
+export function handleOptions(options: Options | string, defaultOptions = DEFAULT_OPTIONS): InternalOptions {
     return typeof options === 'object'
         ? {
               palette: {
                   primary: {
-                      info: options.palette?.primary?.info ?? DEFAULT_OPTIONS.palette.primary.info,
-                      success: options.palette?.primary?.success ?? DEFAULT_OPTIONS.palette.primary.success,
-                      debug: options.palette?.primary?.debug ?? DEFAULT_OPTIONS.palette.primary.debug,
-                      warning: options.palette?.primary?.warning ?? DEFAULT_OPTIONS.palette.primary.warning,
-                      error: options.palette?.primary?.error ?? DEFAULT_OPTIONS.palette.primary.error
+                      info: options.palette?.primary?.info ?? defaultOptions.palette.primary.info,
+                      success: options.palette?.primary?.success ?? defaultOptions.palette.primary.success,
+                      debug: options.palette?.primary?.debug ?? defaultOptions.palette.primary.debug,
+                      warning: options.palette?.primary?.warning ?? defaultOptions.palette.primary.warning,
+                      error: options.palette?.primary?.error ?? defaultOptions.palette.primary.error
                   },
                   secondary: {
-                      info: options.palette?.secondary?.info ?? DEFAULT_OPTIONS.palette.secondary.info,
-                      success: options.palette?.secondary?.success ?? DEFAULT_OPTIONS.palette.secondary.success,
-                      debug: options.palette?.secondary?.debug ?? DEFAULT_OPTIONS.palette.secondary.debug,
-                      warning: options.palette?.secondary?.warning ?? DEFAULT_OPTIONS.palette.secondary.warning,
-                      error: options.palette?.secondary?.error ?? DEFAULT_OPTIONS.palette.secondary.error
+                      info: options.palette?.secondary?.info ?? defaultOptions.palette.secondary.info,
+                      success: options.palette?.secondary?.success ?? defaultOptions.palette.secondary.success,
+                      debug: options.palette?.secondary?.debug ?? defaultOptions.palette.secondary.debug,
+                      warning: options.palette?.secondary?.warning ?? defaultOptions.palette.secondary.warning,
+                      error: options.palette?.secondary?.error ?? defaultOptions.palette.secondary.error
                   }
               },
-              debug: options.debug ?? DEFAULT_OPTIONS.debug,
-              scope: options.scope ?? DEFAULT_OPTIONS.scope
+              debug: options.debug ?? defaultOptions.debug,
+              scope: options.scope ?? defaultOptions.scope
           }
-        : { ...DEFAULT_OPTIONS, scope: options };
+        : { ...defaultOptions, scope: options };
 }

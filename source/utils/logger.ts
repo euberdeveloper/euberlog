@@ -1,5 +1,5 @@
 import { Palette } from '@/types/palette';
-import { Options } from '@/types/options';
+import { InternalOptions, Options } from '@/types/options';
 
 import { handleOptions } from './options';
 import { colour } from './colour';
@@ -8,9 +8,17 @@ import { colour } from './colour';
  * The logger class, its instances will be the euber loggers.
  */
 export class Logger {
-    private palette: Palette;
-    private showDebug: boolean;
-    private scope: string | null;
+    private options: InternalOptions;
+
+    private get palette(): Palette {
+        return this.options.palette;
+    }
+    private get showDebug(): boolean {
+        return this.options.debug;
+    }
+    private get scope(): string | null {
+        return this.options.scope;
+    }
 
     /**
      * The constructor of the Logger class.
@@ -25,10 +33,7 @@ export class Logger {
      * @param options The options for the logger.
      */
     public setOptions(options?: Options | string): void {
-        const handledOptions = handleOptions(options ?? {});
-        this.palette = handledOptions.palette;
-        this.showDebug = handledOptions.debug;
-        this.scope = handledOptions.scope;
+        this.options = handleOptions(options ?? {}, this.options);
     }
 
     /**

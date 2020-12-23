@@ -22,7 +22,7 @@ const COLOURS = [
 ];
 
 export function colour(colour: string): chalk.Chalk {
-    if (/^#([a-fA-F0-9]{3}){1,2}$/i.test(colour)) {
+    if (/^#([a-f0-9]{3}){1,2}$/i.test(colour)) {
         return chalk.hex(colour);
     } else {
         const regexpResult = /^\((?<red>\d{1,3}),(?<green>\d{1,3}),(?<blue>\d{1,3})\)$/.exec(colour)?.groups;
