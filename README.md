@@ -47,11 +47,16 @@ const logger = new Logger();
 // Prints one line of '-'
 logger.hr();
 
-// Prints 4 empty lines
-logger.br(4);
+// Prints two empty lines
+logger.br(2);
 
-// Prints two lines of red '*'
-logger.hr(2, 'red', '*');
+logger.info('My name is Eugenio');
+
+// Prints two empty lines
+logger.br(2);
+
+// Prints five lines of red '*'
+logger.hr(5, 'red', '*');
 ```
 
 ![Simple example](https://github.com/euberdeveloper/euberlog/raw/main/docs/assets/br_and_hr.png)
@@ -79,7 +84,7 @@ const logger = new Logger({
     palette: { // Overrides the default colour palette
         primary: {
             info: 'orange',
-            success: '(146, 133, 255)'
+            success: '(146,133,255)'
         },
         secondary: {
             info: '#ffd485',
@@ -122,11 +127,11 @@ The options parameter is a `string` or a `Options` object. If it is a string, it
 
 **PaletteDefinitions:**
 
-* __info__: The colour for the info logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255, 255, 255)'`) or a css keyword (such as `'orange'`)
-* __success__: The colour for the success logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255, 255, 255)'`) or a css keyword (such as `'orange'`)
-* __debug__: The colour for the debug logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255, 255, 255)'`) or a css keyword (such as `'orange'`)
-* __warning__: The colour for the warning logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255, 255, 255)'`) or a css keyword (such as `'orange'`)
-* __error__: The colour for the error logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255, 255, 255)'`) or a css keyword (such as `'orange'`)
+* __info__: The colour for the info logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255,255,255)'`) or a css keyword (such as `'orange'`)
+* __success__: The colour for the success logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255,255,255)'`) or a css keyword (such as `'orange'`)
+* __debug__: The colour for the debug logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255,255,255)'`) or a css keyword (such as `'orange'`)
+* __warning__: The colour for the warning logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255,255,255)'`) or a css keyword (such as `'orange'`)
+* __error__: The colour for the error logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255,255,255)'`) or a css keyword (such as `'orange'`)
 
 Note: the __default_options__ are:
 
