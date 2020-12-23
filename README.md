@@ -128,6 +128,31 @@ The options parameter is a `string` or a `Options` object. If it is a string, it
 * __warning__: The colour for the warning logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255, 255, 255)'`) or a css keyword (such as `'orange'`)
 * __error__: The colour for the error logs. Note: the colour can be a valid `chalk` colour (such as `'white'`), an hex colour (such as `'#FFFFFF'`), an RGB colour (such as `'(255, 255, 255)'`) or a css keyword (such as `'orange'`)
 
+Note: the __default_options__ are:
+
+```js
+const DEFAULT_OPTIONS = {
+    palette: {
+        primary: {
+            info: 'blue',
+            success: 'green',
+            debug: 'gray',
+            warning: 'yellow',
+            error: 'red'
+        },
+        secondary: {
+            info: '#81A2BE',
+            success: '#B5BD68',
+            debug: '#C5C8C6',
+            warning: '#F0C674',
+            error: '#CC6666'
+        }
+    },
+    debug: true,
+    scope: null
+};
+```
+
 **Methods:**
 
 * __info(message: string, object?: any): void__: Logs an info message. The format is "[INFO] |{SCOPE}| message |object|", where |word| is optional.
