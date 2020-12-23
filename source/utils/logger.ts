@@ -77,7 +77,7 @@ export class Logger {
      */
     public debug(message: string, object?: any): void {
         if (this.showDebug) {
-            const tag = colour(this.palette.primary.debug)('[DEBUG]');
+            const tag = colour(this.palette.primary.debug).bold('[DEBUG]');
             const scope = this.scope ? colour(this.palette.primary.debug)(` {${this.scope}}`) : '';
             const msg = colour(this.palette.secondary.debug)(` ${message}`);
             const text = `${tag}${scope}${msg}`;
