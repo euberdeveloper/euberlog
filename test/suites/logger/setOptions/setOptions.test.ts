@@ -3,6 +3,9 @@ import { createSandbox, SinonStub, SinonSandbox } from 'sinon';
 
 import { Logger } from '@/utils/logger';
 
+import { getDefaultColors } from '@test/utils/getDefaultOptions';
+const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('info');
+
 export default function testConstructor(): void {
     describe('Test Logger class setOptions method', function () {
         let sandbox: SinonSandbox, stubConsoleDebug: SinonStub, stubConsoleLog: SinonStub;
@@ -41,16 +44,16 @@ export default function testConstructor(): void {
             logger.info('Altra informazione');
 
             expect(stubConsoleLog).to.have.been.calledWith(
-                '\x1B[38;2;129;162;190m\x1B[34m\x1B[1m[INFO]\x1B[22m\x1B[39m\x1B[38;2;129;162;190m Informazione\x1B[39m'
+                COLOUR_PRIMARY.bold('[INFO]') + COLOUR_SECONDARY(' Informazione')
             );
             expect(stubConsoleLog).to.have.been.calledWith(
-                '\x1B[38;2;129;162;190m\x1B[34m\x1B[1m[INFO]\x1B[22m\x1B[39m\x1B[38;2;129;162;190m\x1B[34m {FIRST}\x1B[39m\x1B[38;2;129;162;190m Informazione\x1B[39m'
+                COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {FIRST}') + COLOUR_SECONDARY(' Informazione')
             );
             expect(stubConsoleLog).to.have.been.calledWith(
-                '\x1B[38;2;129;162;190m\x1B[34m\x1B[1m[INFO]\x1B[22m\x1B[39m\x1B[38;2;129;162;190m\x1B[34m {SECOND}\x1B[39m\x1B[38;2;129;162;190m Informazione\x1B[39m'
+                COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {SECOND}') + COLOUR_SECONDARY(' Informazione')
             );
             expect(stubConsoleLog).to.have.been.calledWith(
-                '\x1B[38;2;129;162;190m\x1B[34m\x1B[1m[INFO]\x1B[22m\x1B[39m\x1B[38;2;129;162;190m\x1B[34m {SECOND}\x1B[39m\x1B[38;2;129;162;190m Altra informazione\x1B[39m'
+                COLOUR_PRIMARY.bold('[INFO]') + COLOUR_SECONDARY(' Altra informazione')
             );
         });
     });
