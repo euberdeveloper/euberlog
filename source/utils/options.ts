@@ -41,7 +41,7 @@ export function handleOptions(options: Options | string, defaultOptions = DEFAUL
                   }
               },
               debug: options.debug ?? defaultOptions.debug,
-              scope: options.scope ?? defaultOptions.scope
+              scope: options.scope === undefined ? null : defaultOptions.scope
           }
         : { ...defaultOptions, scope: options };
 }
