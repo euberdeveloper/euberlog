@@ -25,7 +25,7 @@ export class Logger {
      * @param options The options for the logger.
      */
     public setOptions(options?: Options | string): void {
-        const handledOptions = handleOptions(options);
+        const handledOptions = handleOptions(options ?? {});
         this.palette = handledOptions.palette;
         this.showDebug = handledOptions.debug;
         this.scope = handledOptions.scope;
@@ -117,8 +117,7 @@ export class Logger {
      * Logs one or more empty lines.
      * @param n The number of empty lines. Default is 1.
      */
-    public br(n?: number): void {
-        n = n ?? 1;
+    public br(n = 1): void {
         for (let i = 0; i < n; i++) {
             console.log();
         }
@@ -130,8 +129,7 @@ export class Logger {
      * @param color The colour of the font. Default is 'white'.
      * @param symbol The symbol that constitutes the hr. Default is '-'.
      */
-    public hr(n?: number, color = 'white', symbol = '-'): void {
-        n = n ?? 1;
+    public hr(n = 1, color = 'white', symbol = '-'): void {
         const terminalWidth = process.stdout.columns || 50;
         const hyphens = Array(terminalWidth).fill(symbol).join('');
         for (let i = 0; i < n; i++) {

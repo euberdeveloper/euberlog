@@ -21,7 +21,7 @@ const DEFAULT_OPTIONS: InternalOptions = {
     scope: null
 };
 
-export function handleOptions(options?: Options | string): InternalOptions {
+export function handleOptions(options: Options | string): InternalOptions {
     return typeof options === 'object'
         ? {
               palette: {
@@ -43,5 +43,5 @@ export function handleOptions(options?: Options | string): InternalOptions {
               debug: options.debug ?? DEFAULT_OPTIONS.debug,
               scope: options.scope ?? DEFAULT_OPTIONS.scope
           }
-        : { ...DEFAULT_OPTIONS, scope: options ?? DEFAULT_OPTIONS.scope };
+        : { ...DEFAULT_OPTIONS, scope: options };
 }
