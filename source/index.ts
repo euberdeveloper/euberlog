@@ -1,2 +1,2 @@
-export * from './types';
-export * from './utils/logger';
+export * from '@/types';
+export * from '@/utils/logger';

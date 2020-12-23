@@ -1,8 +1,8 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const TerserPlugin = require('terser-webpack-plugin');
-const DtsBundleWebpack = require('dts-bundle-webpack')
-
+const DtsBundleWebpack = require('dts-bundle-webpack');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     target: 'node',
@@ -10,7 +10,11 @@ module.exports = {
         index: './source/index.ts',
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: [".ts", ".js"],
+        plugins: [new TsconfigPathsPlugin({
+            configFile: './source/tsconfig.json',
+            extensions: [".ts", ".js"]
+        })]
     },
     module: {
         rules: [
@@ -19,7 +23,8 @@ module.exports = {
                 include: path.resolve(__dirname, 'source'),
                 use: [
                     {
-                        loader: 'ts-loader'
+                        loader: 'ts-loader',
+                        options: { compiler: 'ttypescript' }
                     }
                 ]
             }
@@ -31,7 +36,7 @@ module.exports = {
             main: 'dist/index.d.ts',
             out: '../bundled/index.d.ts'
         })
-      ],
+    ],
     externals: [nodeExternals()],
     optimization: {
         minimizer: [
