@@ -160,11 +160,11 @@ const DEFAULT_OPTIONS = {
 
 **Methods:**
 
-* __info(message: string, object?: any): void__: Logs an info message. The format is "[INFO] |{SCOPE}| message |object|", where |word| is optional.
-* __success(message: string, object?: any): void__: Logs an success message. The format is "[SUCCESS] |{SCOPE}| message |object|", where |word| is optional.
-* __debug(message: string, object?: any): void__: Logs an debug message. The format is "[DEBUG] |{SCOPE}| message |object|", where |word| is optional.
-* __warning(message: string, object?: any): void__: Logs an warning message. The format is "[WARNING] |{SCOPE}| message |object|", where |word| is optional.
-* __error(message: string, object?: any): void__: Logs an error message. The format is "[ERROR] |{SCOPE}| message |object|", where |word| is optional.
+* __info(message: string, object?: any): void__: Logs an info message. The format is `[INFO] |{SCOPE}| message |object|`, where `|word|` is optional.
+* __success(message: string, object?: any): void__: Logs an success message. The format is `[SUCCESS] |{SCOPE}| message |object|`, where `|word|` is optional.
+* __debug(message: string, object?: any): void__: Logs an debug message. The format is `[DEBUG] |{SCOPE}| message |object|`, where `|word|` is optional.
+* __warning(message: string, object?: any): void__: Logs an warning message. The format is `[WARNING] |{SCOPE}| message |object|`, where `|word|` is optional.
+* __error(message: string, object?: any): void__: Logs an error message. The format is `[ERROR] |{SCOPE}| message |object|`, where `|word|` is optional.
 * __br(n?: number): void__: Logs `n` empty lines. The default value of `n` is `1`.
 * __hr(n?: number, color?: string, symbol: string): void__: Logs `n` hr lines, coloured with `color` and constituted by `symbol` characters. THe default value of `n` is `1`, the default colour is `'white'` and the default symbol is `'-'`.
 * __setOptions(options?: Options | string): void__: It changes the options of the logger instance. It is almost as using the class constructor, with the difference that a new instance will not be created.
