@@ -36,6 +36,8 @@ logger.error('Errore');
 logger.info('My car is:', { constructor: 'Toyota', model: 'Yaris', year: 2004 });
 ```
 
+![Simple example](https://github.com/euberdeveloper/euberlog/raw/main/docs/assets/simple.png)
+
 ## Br and hr
 
 ```js
@@ -52,6 +54,8 @@ logger.br(4);
 logger.hr(2, 'red', '*');
 ```
 
+![Simple example](https://github.com/euberdeveloper/euberlog/raw/main/docs/assets/br_and_hr.png)
+
 ## With scope
 
 ```js
@@ -63,6 +67,7 @@ logger.info('Informazione');
 logger.success('Successo!!!');
 logger.error('The error is:', new Error('Errore'));
 ```
+![Simple example](https://github.com/euberdeveloper/euberlog/raw/main/docs/assets/with_scope.png)
 
 ## With options
 
@@ -87,6 +92,8 @@ logger.info('Informazione');
 logger.success('Successo!!!');
 logger.debug('This is not shown');
 ```
+
+![Simple example](https://github.com/euberdeveloper/euberlog/raw/main/docs/assets/with_options.png)
 
 ## API
 
