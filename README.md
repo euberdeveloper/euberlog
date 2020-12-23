@@ -7,6 +7,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/euberdeveloper/euberlog.svg)](https://github.com/euberdeveloper/euberlog/issues)
 [![GitHub stars](https://img.shields.io/github/stars/euberdeveloper/euberlog.svg)](https://github.com/euberdeveloper/euberlog/stargazers)
 ![npm](https://img.shields.io/npm/v/euberlog.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 # euberlog
 A beautiful nodejs logger.
