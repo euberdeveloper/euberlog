@@ -44,7 +44,8 @@ export class Logger {
     public info(message: string, object?: any): void {
         const tag = colour(this.palette.primary.info).bold('[INFO]');
         const scope = this.scope ? colour(this.palette.primary.info)(` {${this.scope}}`) : '';
-        const text = colour(this.palette.secondary.info)(`${tag}${scope} ${message}`);
+        const msg = colour(this.palette.secondary.info)(` ${message}`);
+        const text = `${tag}${scope}${msg}`;
         if (object) {
             console.log(text, object);
         } else {
@@ -60,7 +61,8 @@ export class Logger {
     public success(message: string, object?: any): void {
         const tag = colour(this.palette.primary.success).bold('[SUCCESS]');
         const scope = this.scope ? colour(this.palette.primary.success)(` {${this.scope}}`) : '';
-        const text = colour(this.palette.secondary.success)(`${tag}${scope} ${message}`);
+        const msg = colour(this.palette.secondary.success)(` ${message}`);
+        const text = `${tag}${scope}${msg}`;
         if (object) {
             console.log(text, object);
         } else {
@@ -77,7 +79,8 @@ export class Logger {
         if (this.showDebug) {
             const tag = colour(this.palette.primary.debug)('[DEBUG]');
             const scope = this.scope ? colour(this.palette.primary.debug)(` {${this.scope}}`) : '';
-            const text = colour(this.palette.secondary.debug)(`${tag}${scope} ${message}`);
+            const msg = colour(this.palette.secondary.debug)(` ${message}`);
+            const text = `${tag}${scope}${msg}`;
             if (object) {
                 console.debug(text, object);
             } else {
@@ -94,7 +97,8 @@ export class Logger {
     public warning(message: string, object?: any): void {
         const tag = colour(this.palette.primary.warning).bold('[WARNING]');
         const scope = this.scope ? colour(this.palette.primary.warning)(` {${this.scope}}`) : '';
-        const text = colour(this.palette.secondary.warning)(`${tag}${scope} ${message}`);
+        const msg = colour(this.palette.secondary.warning)(` ${message}`);
+        const text = `${tag}${scope}${msg}`;
         if (object) {
             console.warn(text, object);
         } else {
@@ -110,7 +114,8 @@ export class Logger {
     public error(message: string, error?: any): void {
         const tag = colour(this.palette.primary.error).bold('[ERROR]');
         const scope = this.scope ? colour(this.palette.primary.error)(` {${this.scope}}`) : '';
-        const text = colour(this.palette.secondary.error)(`${tag}${scope} ${message}`);
+        const msg = colour(this.palette.secondary.error)(` ${message}`);
+        const text = `${tag}${scope}${msg}`;
         if (error) {
             console.error(text, error);
         } else {

@@ -3,6 +3,9 @@ import { createSandbox, SinonStub, SinonSandbox } from 'sinon';
 
 import { Logger } from '@/utils/logger';
 
+import { getDefaultColors } from '@test/utils/getDefaultOptions';
+const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('info');
+
 export default function testInfo(): void {
     describe('Test info method', function () {
         let logger: Logger;
@@ -21,21 +24,20 @@ export default function testInfo(): void {
         it('Should print an info log text "Informazione"', function () {
             logger.info('Informazione');
             const expected =
-                '\u001b[38;2;129;162;190m\u001b[34m\u001b[1m[INFO]\u001b[22m\u001b[39m\u001b[38;2;129;162;190m\u001b[34m {SCOPE}\u001b[39m\u001b[38;2;129;162;190m Informazione\u001b[39m';
+                COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Informazione');
             expect(stubConsoleLog).to.have.been.calledOnceWithExactly(expected);
         });
 
         it('Should print an info log text "Auskunft"', function () {
             logger.info('Auskunft');
-            const expected =
-                '\u001b[38;2;129;162;190m\u001b[34m\u001b[1m[INFO]\u001b[22m\u001b[39m\u001b[38;2;129;162;190m\u001b[34m {SCOPE}\u001b[39m\u001b[38;2;129;162;190m Auskunft\u001b[39m';
+            const expected = COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Auskunft');
             expect(stubConsoleLog).to.have.been.calledOnceWithExactly(expected);
         });
 
         it('Should print an info log text "Informazione" with an object { n: 1 }', function () {
             logger.info('Informazione', { n: 1 });
             const expected = [
-                '\u001b[38;2;129;162;190m\u001b[34m\u001b[1m[INFO]\u001b[22m\u001b[39m\u001b[38;2;129;162;190m\u001b[34m {SCOPE}\u001b[39m\u001b[38;2;129;162;190m Informazione\u001b[39m',
+                COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Informazione'),
                 { n: 1 }
             ];
             expect(stubConsoleLog).to.have.been.calledOnceWithExactly(...expected);
