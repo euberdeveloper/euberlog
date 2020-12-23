@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import * as path from 'path';
 import { Chalk } from 'chalk';
 import rewire = require('rewire');
@@ -18,4 +19,10 @@ export function getDefaultColors(type: string): { COLOUR_PRIMARY: Chalk; COLOUR_
         COLOUR_PRIMARY: colour(DEFAULT_OPTIONS.palette.primary[type]),
         COLOUR_SECONDARY: colour(DEFAULT_OPTIONS.palette.secondary[type])
     };
+}
+
+export function getHrPattern(color: string, symbol: string): RegExp {
+    const template = colour(color)('TEMPLATE');
+    const [pre, post] = template.split('TEMPLATE').map(v => v.replace('[', '\\['));
+    return new RegExp(`^${pre}${symbol}+${post}$`);
 }

@@ -2,6 +2,7 @@ import { expect } from 'chai';
 import { createSandbox, SinonStub, SinonSandbox, match } from 'sinon';
 
 import { Logger } from '@/utils/logger';
+import { getHrPattern } from '@test/utils/getDefaultOptions';
 
 export default function testSpecials(): void {
     describe('Test Logger br and hr methods', function () {
@@ -39,28 +40,28 @@ export default function testSpecials(): void {
             const logger = new Logger();
             logger.hr();
             expect(stubConsoleLog).to.have.been.calledOnce;
-            expect(stubConsoleLog).to.have.been.calledWithMatch(match(/^\u001b\[37m-+\u001b\[39m$/));
+            expect(stubConsoleLog).to.have.been.calledWithMatch(match(getHrPattern('white', '-')));
         });
 
         it('Should print three standard hr lines', function () {
             const logger = new Logger();
             logger.hr(3);
             expect(stubConsoleLog).to.have.been.calledThrice;
-            expect(stubConsoleLog).to.have.been.always.calledWithMatch(match(/^\u001b\[37m-+\u001b\[39m$/));
+            expect(stubConsoleLog).to.have.been.always.calledWithMatch(match(getHrPattern('white', '-')));
         });
 
-        it('Should print an yellow hr line', function () {
+        it('Should print a yellow hr line', function () {
             const logger = new Logger();
             logger.hr(1, 'yellow');
             expect(stubConsoleLog).to.have.been.calledOnce;
-            expect(stubConsoleLog).to.have.been.calledWithMatch(match(/^\u001b\[33m-+\u001b\[39m$/));
+            expect(stubConsoleLog).to.have.been.calledWithMatch(match(getHrPattern('yellow', '-')));
         });
 
         it('Should print an hr line of @', function () {
             const logger = new Logger();
             logger.hr(1, 'white', '@');
             expect(stubConsoleLog).to.have.been.calledOnce;
-            expect(stubConsoleLog).to.have.been.calledWithMatch(match(/^\u001b\[37m@+\u001b\[39m$/));
+            expect(stubConsoleLog).to.have.been.calledWithMatch(match(getHrPattern('white', '@')));
         });
     });
 }
