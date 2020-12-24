@@ -29,3 +29,7 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Send coverage report to Codecov
+        uses: Atrox/codecov-action@v0.1.2
+        with: ${{ secrets.CODECOV_TOKEN }} 
