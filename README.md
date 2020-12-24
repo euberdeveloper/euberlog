@@ -13,6 +13,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Types](https://img.shields.io/npm/types/euberlog.svg)](https://www.npmjs.com/package/euberlog)
 [![Maintainability](https://api.codeclimate.com/v1/badges/898fd5ca5774fb92d9c8/maintainability)](https://codeclimate.com/github/euberdeveloper/euberlog/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/898fd5ca5774fb92d9c8/test_coverage)](https://codeclimate.com/github/euberdeveloper/euberlog/test_coverage)
 
 # euberlog
 A beautiful nodejs logger.
