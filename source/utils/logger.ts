@@ -28,6 +28,18 @@ export class Logger {
         this.setOptions(options);
     }
 
+    private logMessage(message: string, logName: string, logFunction: string, object?: any): void {
+        const tag = colour(this.palette.primary[logName]).bold(`[${logName.toUpperCase()}]`);
+        const scope = this.scope ? colour(this.palette.primary[logName])(` {${this.scope}}`) : '';
+        const msg = colour(this.palette.secondary[logName])(` ${message}`);
+        const text = `${tag}${scope}${msg}`;
+        if (object) {
+            console[logFunction](text, object);
+        } else {
+            console[logFunction](text);
+        }
+    }
+
     /**
      * Sets the options of the logger.
      * @param options The options for the logger.
@@ -42,15 +54,7 @@ export class Logger {
      * @param object An optional object to log.
      */
     public info(message: string, object?: any): void {
-        const tag = colour(this.palette.primary.info).bold('[INFO]');
-        const scope = this.scope ? colour(this.palette.primary.info)(` {${this.scope}}`) : '';
-        const msg = colour(this.palette.secondary.info)(` ${message}`);
-        const text = `${tag}${scope}${msg}`;
-        if (object) {
-            console.log(text, object);
-        } else {
-            console.log(text);
-        }
+        this.logMessage(message, 'info', 'log', object);
     }
 
     /**
@@ -59,15 +63,7 @@ export class Logger {
      * @param object An optional object to log.
      */
     public success(message: string, object?: any): void {
-        const tag = colour(this.palette.primary.success).bold('[SUCCESS]');
-        const scope = this.scope ? colour(this.palette.primary.success)(` {${this.scope}}`) : '';
-        const msg = colour(this.palette.secondary.success)(` ${message}`);
-        const text = `${tag}${scope}${msg}`;
-        if (object) {
-            console.log(text, object);
-        } else {
-            console.log(text);
-        }
+        this.logMessage(message, 'success', 'log', object);
     }
 
     /**
@@ -77,15 +73,7 @@ export class Logger {
      */
     public debug(message: string, object?: any): void {
         if (this.showDebug) {
-            const tag = colour(this.palette.primary.debug).bold('[DEBUG]');
-            const scope = this.scope ? colour(this.palette.primary.debug)(` {${this.scope}}`) : '';
-            const msg = colour(this.palette.secondary.debug)(` ${message}`);
-            const text = `${tag}${scope}${msg}`;
-            if (object) {
-                console.debug(text, object);
-            } else {
-                console.debug(text);
-            }
+            this.logMessage(message, 'debug', 'debug', object);
         }
     }
 
@@ -95,15 +83,7 @@ export class Logger {
      * @param object An optional object to log.
      */
     public warning(message: string, object?: any): void {
-        const tag = colour(this.palette.primary.warning).bold('[WARNING]');
-        const scope = this.scope ? colour(this.palette.primary.warning)(` {${this.scope}}`) : '';
-        const msg = colour(this.palette.secondary.warning)(` ${message}`);
-        const text = `${tag}${scope}${msg}`;
-        if (object) {
-            console.warn(text, object);
-        } else {
-            console.warn(text);
-        }
+        this.logMessage(message, 'warning', 'warn', object);
     }
 
     /**
@@ -112,15 +92,7 @@ export class Logger {
      * @param object An optional object to log.
      */
     public error(message: string, error?: any): void {
-        const tag = colour(this.palette.primary.error).bold('[ERROR]');
-        const scope = this.scope ? colour(this.palette.primary.error)(` {${this.scope}}`) : '';
-        const msg = colour(this.palette.secondary.error)(` ${message}`);
-        const text = `${tag}${scope}${msg}`;
-        if (error) {
-            console.error(text, error);
-        } else {
-            console.error(text);
-        }
+        this.logMessage(message, 'error', 'error', error);
     }
 
     /**
