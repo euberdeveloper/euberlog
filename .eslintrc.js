@@ -11,5 +11,6 @@ module.exports = {
         '@euberdeveloper/typescript',
         'prettier/@typescript-eslint',
         'plugin:prettier/recommended'
-    ]
+    ],
+    excludeFiles: ['**/.eslintrc.js', 'webpack.config.js']
 };
