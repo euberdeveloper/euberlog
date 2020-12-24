@@ -171,7 +171,7 @@ const DEFAULT_OPTIONS = {
 * __hr(n?: number, color?: string, symbol: string): void__: Logs `n` hr lines, coloured with `color` and constituted by `symbol` characters. THe default value of `n` is `1`, the default colour is `'white'` and the default symbol is `'-'`.
 * __setOptions(options?: Options | string): void__: It changes the options of the logger instance. It is almost as using the class constructor, with the difference that a new instance will not be created.
 
-## Build
+## Development
 
 To build the module make sure you have the dev dependencies installed.
 
@@ -179,25 +179,54 @@ The project is written in `Typescript`, bundled with `Webpack` and linted with `
 
 ### Lint
 
-In order to lint the source code:
+In order to lint the code:
 
 ```bash
 $ npm run lint
 ```
 
-In order to lint and fix the source code:
+In order to lint and fix the code:
 
 ```bash
 $ npm run lint:fix
 ```
 
+There are also the `:source` and `:test` suffix after `lint` in order to lint only the source code or the test code.
+
 ### Transpile
+
+To transpile both the source and the test code:
 
 ```bash
 $ npm run transpile
 ```
 
-The `source` folder will be compiled in the `dist` folder. Also the `type declarations` will be generated.
+The `source` and the `test` folders will be transpiled in the `dist` folder. Also the `type declarations` will be generated.
+
+
+To transpile only the source code:
+
+```bash
+$ npm run transpile:source
+```
+
+The `source` folder will be transpiled in the `dist` folder. Also the `type declarations` will be generated.
+
+### Test
+
+After having transpiled the code, run:
+
+```bash
+$ npm test
+```
+
+in order to run the tests with `mocha`.
+
+If a coverage report is to be generated, run:
+
+```bash
+$ npm run nyc
+```
 
 ### Bundle
 
