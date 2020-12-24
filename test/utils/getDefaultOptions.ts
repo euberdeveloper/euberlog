@@ -21,8 +21,9 @@ export function getDefaultColors(type: string): { COLOUR_PRIMARY: Chalk; COLOUR_
     };
 }
 
-export function getHrPattern(color: string, symbol: string): RegExp {
+export function getHrPattern(color: string, symbol: string, n?: number): RegExp {
     const template = colour(color)('TEMPLATE');
     const [pre, post] = template.split('TEMPLATE').map(v => v.replace('[', '\\['));
-    return new RegExp(`^${pre}${symbol}+${post}$`);
+    const nPattern = n ? `{${n}}` : '+';
+    return new RegExp(`^${pre}${symbol}${nPattern}${post}$`);
 }

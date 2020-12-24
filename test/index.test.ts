@@ -9,8 +9,10 @@ chai.use(sinonChai);
 
 import testLogger from '@test/suites/logger/logger.test';
 import testColour from '@test/suites/colour/colour.test';
+import testHandleOptions from '@test/suites/handleOptions/handleOptions.test';
 
 describe('euberlog tests', function () {
     testLogger();
     testColour();
+    testHandleOptions();
 });

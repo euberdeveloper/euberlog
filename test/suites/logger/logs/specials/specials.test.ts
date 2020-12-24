@@ -63,5 +63,17 @@ export default function testSpecials(): void {
             expect(stubConsoleLog).to.have.been.calledOnce;
             expect(stubConsoleLog).to.have.been.calledWithMatch(match(getHrPattern('white', '@')));
         });
+
+        it('Should print a standard hr line with the default 50 characters', function () {
+            const logger = new Logger();
+
+            const backup = process.stdout.columns;
+            process.stdout.columns = undefined as any;
+            logger.hr();
+            process.stdout.columns = backup;
+
+            expect(stubConsoleLog).to.have.been.calledOnce;
+            expect(stubConsoleLog).to.have.been.calledWithMatch(match(getHrPattern('white', '-', 50)));
+        });
     });
 }
