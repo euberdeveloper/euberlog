@@ -1,5 +1,7 @@
 ![Lint](https://github.com/euberdeveloper/euberlog/workflows/Lint/badge.svg)
 ![Build](https://github.com/euberdeveloper/euberlog/workflows/Build/badge.svg)
+![Test](https://github.com/euberdeveloper/euberlog/workflows/Test/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/euberdeveloper/euberlog/badge.svg?branch=main)](https://coveralls.io/github/euberdeveloper/euberlog?branch=main)
 [![Known Vulnerabilities](https://snyk.io/test/github/euberdeveloper/euberlog/badge.svg?targetFile=package.json)](https://snyk.io/test/github/euberdeveloper/euberlog?targetFile=package.json)
 [![dependencies Status](https://david-dm.org/euberdeveloper/euberlog/status.svg)](https://david-dm.org/euberdeveloper/euberlog)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
