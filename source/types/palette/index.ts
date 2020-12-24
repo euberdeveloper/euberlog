@@ -1,7 +1,7 @@
 /**
  * A palette definition interface.
  */
-interface PaletteDefinitions {
+export interface PaletteDefinitions {
     /**
      * The colour for the info logs. Note: the colour can be a valid chalk colour (such as 'white'), an hex colour (such as '#FFFFFF'), an RGB colour (such as '(255, 255, 255)') or a css keyword (such as 'orange')
      */
