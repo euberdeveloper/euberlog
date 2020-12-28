@@ -6,14 +6,15 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     target: 'node',
+    // devtool: 'source-map',
     entry: {
         index: './source/index.ts',
     },
     resolve: {
-        extensions: [".ts", ".js"],
+        extensions: ['.ts', '.js'],
         plugins: [new TsconfigPathsPlugin({
             configFile: './source/tsconfig.json',
-            extensions: [".ts", ".js"]
+            extensions: ['.ts', '.js']
         })]
     },
     module: {
