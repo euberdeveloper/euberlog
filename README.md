@@ -109,6 +109,10 @@ logger.debug('This is not shown');
 
 ## API
 
+The documentation site is: [euberlog documentation](https://euberlog.vercel.app)
+
+The documentation for development site is: [euberlog dev documentation](https://euberlog-dev.vercel.app)
+
 ### Logger
 
  The logger class, its instances will be the euber loggers.
