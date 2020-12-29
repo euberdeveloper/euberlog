@@ -32,7 +32,7 @@ jobs:
         
       - name: Send coverage report to Codecov
         uses: Atrox/codecov-action@v0.1.2
-        with: 
+        env: 
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }} 
       
       - name: Send coverage report to Code Climate
