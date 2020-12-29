@@ -1,6 +1,9 @@
 import { Options, InternalOptions } from '@/types/options';
 import { PaletteDefinitions } from '@/types/palette';
 
+/**
+ * The default options of the library. The options passed by the user will be merged with these options.
+ */
 const DEFAULT_OPTIONS: InternalOptions = {
     palette: {
         primary: {
@@ -22,6 +25,11 @@ const DEFAULT_OPTIONS: InternalOptions = {
     scope: null
 };
 
+/**
+ * Merges partial options with some default options.
+ * @param options The partial options to purge and merge.
+ * @param defaultOptions The default options value (default is DEFAULT_OPTIONS) for the not specified values in the options parameter.
+ */
 export function handleOptions(options: Options | string, defaultOptions = DEFAULT_OPTIONS): InternalOptions {
     function handlePaletteDefinitions(property: 'primary' | 'secondary'): PaletteDefinitions {
         const opt = options as Options;

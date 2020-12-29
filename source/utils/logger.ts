@@ -8,14 +8,26 @@ import { colour } from './colour';
  * The logger class, its instances will be the euber loggers.
  */
 export class Logger {
+    /**
+     * The options passed to the logger, purged to InternalOptions.
+     */
     private options: InternalOptions;
 
+    /**
+     * The palette of the colours.
+     */
     private get palette(): Palette {
         return this.options.palette;
     }
+    /**
+     * If the debug logs will be shown.
+     */
     private get showDebug(): boolean {
         return this.options.debug;
     }
+    /**
+     * The scope of the logger.
+     */
     private get scope(): string | null {
         return this.options.scope;
     }
@@ -28,6 +40,13 @@ export class Logger {
         this.setOptions(options);
     }
 
+    /**
+     * An helper method for logging a message.
+     * @param message The message text to be logged.
+     * @param logName The log name, one of 'info', 'success', 'debug', 'warning' or 'error'. It is used for the [TAG] or the palette colour.
+     * @param logFunction The log function, console.[function] is the function used to print the log.
+     * @param object The optional object to print with the message.
+     */
     private logMessage(message: string, logName: string, logFunction: string, object?: any): void {
         const tag = colour(this.palette.primary[logName]).bold(`[${logName.toUpperCase()}]`);
         const scope = this.scope ? colour(this.palette.primary[logName])(` {${this.scope}}`) : '';

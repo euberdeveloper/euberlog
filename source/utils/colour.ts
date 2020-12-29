@@ -1,5 +1,8 @@
 import * as chalk from 'chalk';
 
+/**
+ * The colours that are direct functions of chalk (chalk.[colour]() is a valid function).
+ */
 const COLOURS = [
     'black',
     'red',
@@ -21,6 +24,10 @@ const COLOURS = [
     'whiteBright'
 ];
 
+/**
+ * Given a colour, returns the corrisponding chalk function.
+ * @param colour The colour as a direct colour (such as 'black'), an hex colour (such as '#fafafa'), an RGB colour (such as '(255,255,255)') or a css colour (such as 'orange').
+ */
 export function colour(colour: string): chalk.Chalk {
     if (/^#([a-f0-9]{3}){1,2}$/i.test(colour)) {
         return chalk.hex(colour);

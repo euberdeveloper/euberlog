@@ -1,2 +1,2 @@
-export { Palette } from './palette';
-export { Options } from './options';
+export * from './palette';
+export * from './options';
