@@ -25,7 +25,7 @@
     "lint": "npm run lint:source && npm run lint:test",
     "lint:fix": "npm run lint:source:fix && npm run lint:test:fix",
     "docs:html": "typedoc",
-    "docs:html-dev": "ltypedoc --options typedoc.dev.js",
+    "docs:html-dev": "typedoc --options typedoc.dev.js",
     "docs": "npm run docs:html && npm run docs:html-dev",
     "test": "mocha ./dist/test/index.test.js --reporter spec",
     "nyc": "nyc --extension=ts --reporter=html --reporter=text --reporter=lcov -x \"test\" npm test",
