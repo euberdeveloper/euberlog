@@ -1,6 +1,6 @@
 {
   "name": "euberlog",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "A beautiful nodejs logger",
   "main": "bundled/index.js",
   "types": "bundled/index.d.ts",
@@ -68,7 +68,6 @@
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
-    "ltypedoc": "^1.0.7",
     "mocha": "^8.2.1",
     "module-alias": "^2.2.2",
     "nyc": "^15.1.0",
