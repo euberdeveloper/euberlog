@@ -20,17 +20,17 @@ export default function testDebug(): void {
 
         it('Should print a debug log text "Debug"', function () {
             logger.debug('Debug');
-            expect(stubConsoleDebug).to.have.callCount(0);
+            expect(stubConsoleDebug).to.have.not.been.called;
         });
 
         it('Should print a debug log text "Debuggen"', function () {
             logger.debug('Debuggen');
-            expect(stubConsoleDebug).to.have.callCount(0);
+            expect(stubConsoleDebug).to.have.not.been.called;
         });
 
         it('Should print a debug log text "Debug" with an object { n: 1 }', function () {
             logger.debug('Debug', { n: 1 });
-            expect(stubConsoleDebug).to.have.callCount(0);
+            expect(stubConsoleDebug).to.have.not.been.called;
         });
     });
 }
