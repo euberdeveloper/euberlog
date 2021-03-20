@@ -9,7 +9,6 @@ module.exports = {
     plugins: ['prettier'],
     extends: [
         '@euberdeveloper/typescript',
-        'prettier/@typescript-eslint',
         'plugin:prettier/recommended'
     ]
 };
