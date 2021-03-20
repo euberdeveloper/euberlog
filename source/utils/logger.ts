@@ -36,7 +36,7 @@ export class Logger {
      * The constructor of the Logger class.
      * @param options The options of the logger. If you want to change only the scope you can pass it as a string.
      */
-    public constructor(options?: Options | string) {
+    constructor(options?: Options | string) {
         this.setOptions(options);
     }
 
