@@ -132,7 +132,7 @@ export class Logger {
      */
     public hr(n = 1, color = 'white', symbol = '-'): void {
         const terminalWidth = process.stdout.columns || 50;
-        const hyphens = Array(terminalWidth).fill(symbol).join('');
+        const hyphens = new Array(terminalWidth).fill(symbol).join('');
         for (let i = 0; i < n; i++) {
             console.log(colour(color)(hyphens));
         }
