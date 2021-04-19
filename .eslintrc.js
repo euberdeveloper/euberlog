@@ -7,6 +7,7 @@ module.exports = {
     plugins: ['@euberdeveloper'],
     extends: [
         'plugin:@euberdeveloper/typescript',
+        'plugin:@euberdeveloper/unicorn',
         'plugin:@euberdeveloper/prettier'
     ]
 };
