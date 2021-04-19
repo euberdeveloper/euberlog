@@ -1,6 +1,6 @@
 {
   "name": "euberlog",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "description": "A beautiful nodejs logger",
   "main": "bundled/index.js",
   "types": "bundled/index.d.ts",
@@ -54,7 +54,7 @@
     }
   },
   "dependencies": {
-    "chalk": "^4.1.1"
+    "chalk": "^4.1.0"
   },
   "devDependencies": {
     "@euberdeveloper/eslint-plugin": "^1.1.3",
