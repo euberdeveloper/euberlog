@@ -2,7 +2,7 @@ name: Lint
 on: [push]
 
 jobs:
-  test:
+  lint:
     runs-on: windows-latest
     
     strategy:
