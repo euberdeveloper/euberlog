@@ -109,9 +109,9 @@ logger.debug('This is not shown');
 
 ## API
 
-The documentation site is: [euberlog documentation](https://euberlog.vercel.app)
+The documentation site is: [euberlog documentation](https://euberlog.euber.dev)
 
-The documentation for development site is: [euberlog dev documentation](https://euberlog-dev.vercel.app)
+The documentation for development site is: [euberlog dev documentation](https://euberlog-dev.euber.dev)
 
 ### Logger
 

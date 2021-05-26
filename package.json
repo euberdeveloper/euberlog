@@ -1,6 +1,6 @@
 {
   "name": "euberlog",
-  "version": "2.0.17",
+  "version": "2.0.18",
   "description": "A beautiful nodejs logger",
   "main": "bundled/index.js",
   "types": "bundled/index.d.ts",
