@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { handleOptions } from '@/utils/options';
+import { handleOptions } from '@src/utils/options';
 
 import { DEFAULT_OPTIONS } from '@test/utils/getDefaultOptions';
 

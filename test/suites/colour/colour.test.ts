@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import * as chalk from 'chalk';
 
-import { colour } from '@/utils/colour';
+import { colour } from '@src/utils/colour';
 
 export default function testColour(): void {
     describe('Test @/utils/colour', function () {

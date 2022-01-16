@@ -15,14 +15,26 @@
             "@/*": [
                 "./source/*"
             ],
+            "@": [
+                "./source"
+            ],
             "@src/*": [
                 "./source/*"
             ],
+            "@src": [
+                "./source"
+            ],
             "@test/*": [
                 "./test/*"
+            ],
+            "@test": [
+                "./test"
             ]
         },
         "outDir": "./dist"
     },
-    "include": ["source", "test"]
+    "include": [
+        "source",
+        "test"
+    ]
 }

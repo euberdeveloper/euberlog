@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { createSandbox, SinonStub, SinonSandbox } from 'sinon';
 
-import { Logger } from '@/utils/logger';
+import { Logger } from '@src/utils/logger';
 
 import { getDefaultColors } from '@test/utils/getDefaultOptions';
 const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('success');

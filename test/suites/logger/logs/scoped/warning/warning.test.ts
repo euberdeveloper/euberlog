@@ -4,7 +4,7 @@ import { createSandbox, SinonStub, SinonSandbox } from 'sinon';
 import { getDefaultColors } from '@test/utils/getDefaultOptions';
 const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('warning');
 
-import { Logger } from '@/utils/logger';
+import { Logger } from '@src/utils/logger';
 
 export default function testWarning(): void {
     describe('Test warning method', function () {

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { createSandbox, SinonStub, SinonSandbox, match } from 'sinon';
 
-import { Logger } from '@/utils/logger';
+import { Logger } from '@src/utils/logger';
 import { getHrPattern } from '@test/utils/getDefaultOptions';
 
 export default function testSpecials(): void {
