@@ -45,6 +45,25 @@ logger.info('My car is:', { constructor: 'Toyota', model: 'Yaris', year: 2004 })
 
 ![Simple example](https://github.com/euberdeveloper/euberlog/raw/main/docs/assets/simple.png)
 
+## Default instance
+
+There is a default export consisting in an instance of `Logger` with default options
+
+```js
+const logger = require('euberlog').default;
+
+logger.info('Informazione');
+logger.success('Successo!!!');
+logger.debug('Debug');
+logger.warning('Warning!!');
+logger.error('Errore');
+
+logger.info('My car is:', { constructor: 'Toyota', model: 'Yaris', year: 2004 });
+```
+
+![Simple example](https://github.com/euberdeveloper/euberlog/raw/main/docs/assets/simple.png)
+
+
 ## Br and hr
 
 ```js
@@ -179,6 +198,10 @@ const DEFAULT_OPTIONS = {
 * __br(n?: number): void__: Logs `n` empty lines. The default value of `n` is `1`.
 * __hr(n?: number, color?: string, symbol: string): void__: Logs `n` hr lines, coloured with `color` and constituted by `symbol` characters. THe default value of `n` is `1`, the default colour is `'white'` and the default symbol is `'-'`.
 * __setOptions(options?: Options | string): void__: It changes the options of the logger instance. It is almost as using the class constructor, with the difference that a new instance will not be created.
+
+### Default instance
+
+There is a default export consisting in an instance of `Logger` with default options
 
 ## Development
 
