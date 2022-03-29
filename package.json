@@ -1,6 +1,6 @@
 {
   "name": "euberlog",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A beautiful nodejs logger",
   "main": "bundled/index.js",
   "types": "bundled/index.d.ts",
@@ -29,8 +29,6 @@
     "docs": "npm run docs:html && npm run docs:html-dev",
     "test": "mocha ./dist/test/index.test.js --reporter spec",
     "nyc": "nyc --extension=ts --reporter=html --reporter=text --reporter=lcov -x \"test\" npm test",
-    "commit": "git-cz",
-    "commit:sign": "git-cz -S",
     "prepublishOnly": "npm run bundle"
   },
   "repository": {
@@ -68,7 +66,6 @@
     "@typescript-eslint/parser": "^4.22.0",
     "chai": "^4.3.4",
     "chai-asserttype": "^1.0.5",
-    "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
     "dts-bundle-webpack": "^1.0.2",
     "eslint": "^7.24.0",
