@@ -4,7 +4,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/euberdeveloper/euberlog/badge.svg?branch=main)](https://coveralls.io/github/euberdeveloper/euberlog?branch=main)
 [![codecov](https://codecov.io/gh/euberdeveloper/euberlog/branch/main/graph/badge.svg?token=4YW49XC338)](https://codecov.io/gh/euberdeveloper/euberlog)
 [![Known Vulnerabilities](https://snyk.io/test/github/euberdeveloper/euberlog/badge.svg?targetFile=package.json)](https://snyk.io/test/github/euberdeveloper/euberlog?targetFile=package.json)
-[![dependencies Status](https://david-dm.org/euberdeveloper/euberlog/status.svg)](https://david-dm.org/euberdeveloper/euberlog)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License](https://img.shields.io/npm/l/euberlog.svg)](https://github.com/euberdeveloper/euberlog/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/euberdeveloper/euberlog.svg)](https://github.com/euberdeveloper/euberlog/issues)
@@ -12,7 +11,6 @@
 ![npm](https://img.shields.io/npm/v/euberlog.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Types](https://img.shields.io/npm/types/euberlog.svg)](https://www.npmjs.com/package/euberlog)
-[![Maintainability](https://api.codeclimate.com/v1/badges/898fd5ca5774fb92d9c8/maintainability)](https://codeclimate.com/github/euberdeveloper/euberlog/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/898fd5ca5774fb92d9c8/test_coverage)](https://codeclimate.com/github/euberdeveloper/euberlog/test_coverage)
 
 # euberlog
