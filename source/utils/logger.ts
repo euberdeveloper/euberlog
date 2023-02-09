@@ -1,8 +1,8 @@
-import { Palette } from '@/types/palette';
-import { InternalOptions, Options } from '@/types/options';
+import { Palette } from '@/types/palette/index.js';
+import { InternalOptions, Options } from '@/types/options/index.js';
 
-import { handleOptions } from './options';
-import { colour } from './colour';
+import { handleOptions } from './options.js';
+import { colour } from './colour.js';
 
 /**
  * The logger class, its instances will be the euber loggers.

@@ -1,10 +1,10 @@
-import { Options, InternalOptions } from '@/types/options';
-import { PaletteDefinitions } from '@/types/palette';
+import { Options, InternalOptions } from '@/types/options/index.js';
+import { PaletteDefinitions } from '@/types/palette/index.js';
 
 /**
  * The default options of the library. The options passed by the user will be merged with these options.
  */
-const DEFAULT_OPTIONS: InternalOptions = {
+export const DEFAULT_OPTIONS: InternalOptions = {
     palette: {
         primary: {
             info: 'blue',

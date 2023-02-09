@@ -1,5 +1,5 @@
-import { DeepPartial } from '../deep-partial';
-import { Palette } from '../palette';
+import { DeepPartial } from '../deep-partial/index.js';
+import { Palette } from '../palette/index.js';
 
 /**
  * The internal options of the logger.

@@ -1,13 +1,17 @@
 {
     "compilerOptions": {
-        "moduleResolution": "node",
-        "module": "commonjs",
-        "target": "ES5",
+        "moduleResolution": "Node16",
+        "module": "Node16",
+        "target": "ES2015",
         "lib": [
             "ES2022"
         ],
         "resolveJsonModule": true,
         "strictNullChecks": true,
+        "downlevelIteration": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
         "sourceMap": true,
         "declaration": false,
         "baseUrl": ".",

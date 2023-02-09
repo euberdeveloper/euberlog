@@ -1,2 +1,2 @@
-export * from './palette';
-export * from './options';
+export * from './palette/index.js';
+export * from './options/index.js';
