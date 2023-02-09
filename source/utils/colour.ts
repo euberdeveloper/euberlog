@@ -1,4 +1,4 @@
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 /**
  * The colours that are direct functions of chalk (chalk.[colour]() is a valid function).
