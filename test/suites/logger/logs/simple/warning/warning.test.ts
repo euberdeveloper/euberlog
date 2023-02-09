@@ -12,7 +12,7 @@ describe('Test warning method', function () {
     });
 
     beforeEach(function () {
-        logger = new Logger({ scope: 'SCOPE', debug: false });
+        logger = new Logger();
         spyConsoleWarn.mockClear();
     });
 

@@ -12,7 +12,7 @@ describe('Test info method', function () {
     });
 
     beforeEach(function () {
-        logger = new Logger({ scope: 'SCOPE', debug: false });
+        logger = new Logger({ scope: 'SCOPE' });
         spyConsoleLog.mockClear();
     });
 

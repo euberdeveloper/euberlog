@@ -15,17 +15,17 @@ describe('Test debug method', function () {
 
     it('Should print a debug log text "Debug"', function () {
         logger.debug('Debug');
-        expect(spyConsoleDebug).toHaveBeenCalled();
+        expect(spyConsoleDebug).not.toHaveBeenCalled();
     });
 
     it('Should print a debug log text "Debuggen"', function () {
         logger.debug('Debuggen');
-        expect(spyConsoleDebug).toHaveBeenCalled();
+        expect(spyConsoleDebug).not.toHaveBeenCalled();
     });
 
     it('Should print a debug log text "Debug" with an object { n: 1 }', function () {
         logger.debug('Debug', { n: 1 });
-        expect(spyConsoleDebug).toHaveBeenCalled();
+        expect(spyConsoleDebug).not.toHaveBeenCalled();
     });
 
     afterAll(function () {
