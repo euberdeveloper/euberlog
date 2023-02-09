@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { Logger } from '@src/utils/logger';
+import { Logger } from '@src/utils/logger.js';
 
 export default function testConstructor(): void {
     describe('Test Logger class constructor', function () {

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { createSandbox, SinonStub, SinonSandbox } from 'sinon';
 
-import { Logger } from '@src/utils/logger';
+import { Logger } from '@src/utils/logger.js';
 
 export default function testDebug(): void {
     describe('Test debug method', function () {

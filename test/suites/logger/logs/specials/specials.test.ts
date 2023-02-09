@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { createSandbox, SinonStub, SinonSandbox, match } from 'sinon';
 
-import { Logger } from '@src/utils/logger';
-import { getHrPattern } from '@test/utils/getDefaultOptions';
+import { Logger } from '@src/utils/logger.js';
+import { getHrPattern } from '@test/utils/getDefaultOptions.js';
 
 export default function testSpecials(): void {
     describe('Test Logger br and hr methods', function () {

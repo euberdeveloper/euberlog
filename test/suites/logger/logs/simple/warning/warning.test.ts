@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import { createSandbox, SinonStub, SinonSandbox } from 'sinon';
 
-import { Logger } from '@src/utils/logger';
+import { Logger } from '@src/utils/logger.js';
 
-import { getDefaultColors } from '@test/utils/getDefaultOptions';
+import { getDefaultColors } from '@test/utils/getDefaultOptions.js';
 const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('warning');
 
 export default function testWarning(): void {

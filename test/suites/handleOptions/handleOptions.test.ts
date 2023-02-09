@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 
-import { handleOptions } from '@src/utils/options';
+import { handleOptions } from '@src/utils/options.js';
 
-import { DEFAULT_OPTIONS } from '@test/utils/getDefaultOptions';
+import { DEFAULT_OPTIONS } from '@test/utils/getDefaultOptions.js';
 
 export default function testHandleOptions(): void {
     describe('Test @/utils/options', function () {

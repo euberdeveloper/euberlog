@@ -5,7 +5,7 @@ moduleAlias.addAlias('@src', path.join(process.cwd(), 'dist', 'source'));
 moduleAlias.addAlias('@test', path.join(process.cwd(), 'dist', 'test'));
 
 import * as chai from 'chai';
-import * as sinonChai from 'sinon-chai';
+import sinonChai from 'sinon-chai';
 chai.use(sinonChai);
 
 import testLogger from '@test/suites/logger/logger.test';

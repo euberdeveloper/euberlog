@@ -5,8 +5,8 @@ import * as path from 'path';
 import { Chalk } from 'chalk';
 import rewire = require('rewire');
 
-import { InternalOptions } from '@src/types/options';
-import { colour } from '@src/utils/colour';
+import { InternalOptions } from '@src/types/options/index.js';
+import { colour } from '@src/utils/colour.js';
 
 const DEFAULT_OPTIONS: InternalOptions = rewire(
     path.join(process.cwd(), 'dist', 'source', 'utils', 'options.js')

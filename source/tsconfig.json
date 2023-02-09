@@ -1,13 +1,6 @@
 {
+    "extends": "../tsconfig.json",
     "compilerOptions": {
-        "moduleResolution": "node",
-        "module": "commonjs",
-        "target": "es5",
-        "lib": [
-            "es2015"
-        ],
-        "resolveJsonModule": true,
-        "strictNullChecks": true,
         "sourceMap": true,
         "declaration": true,
         "baseUrl": ".",
@@ -17,5 +10,8 @@
             ],
         },
         "outDir": "../dist"
-    }
+    },
+    "include": [
+        "."
+    ],
 }
