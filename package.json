@@ -1,6 +1,6 @@
 {
   "name": "euberlog",
-  "version": "2.1.7",
+  "version": "2.2.0",
   "description": "A beautiful nodejs logger",
   "types": "./bundled/index.d.ts",
   "main": "./bundled/commonjs/index.js",
@@ -76,7 +76,6 @@
     "esbuild": "^0.17.6",
     "jest": "^29.4.2",
     "jest-esm-transformer": "^1.0.0",
-    "rewire": "^6.0.0",
     "shx": "^0.3.4",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",

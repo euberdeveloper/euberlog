@@ -1,17 +1,9 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import * as path from 'path';
 import { Chalk } from 'chalk';
-import rewire from 'rewire';
 
-import { InternalOptions } from '@src/types/options/index.js';
 import { colour } from '@src/utils/colour.js';
-
-const DEFAULT_OPTIONS: InternalOptions = rewire(
-    path.join(process.cwd(), 'dist', 'source', 'utils', 'options.js')
-).__get__('DEFAULT_OPTIONS');
-
-export { DEFAULT_OPTIONS };
+import { DEFAULT_OPTIONS } from '@src/utils/options.js';
 
 export function getDefaultColors(type: string): { COLOUR_PRIMARY: Chalk; COLOUR_SECONDARY: Chalk } {
     return {

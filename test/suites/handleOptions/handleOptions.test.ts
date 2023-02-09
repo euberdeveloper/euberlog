@@ -1,6 +1,4 @@
-import { handleOptions } from '@src/utils/options.js';
-
-import { DEFAULT_OPTIONS } from '@test/utils/getDefaultOptions.js';
+import { handleOptions, DEFAULT_OPTIONS } from '@src/utils/options.js';
 
 describe('Test @/utils/options', function () {
     it('Should return the default options', function () {
