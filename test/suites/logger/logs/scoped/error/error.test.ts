@@ -8,14 +8,14 @@ describe('Test error method', function () {
     let spyConsoleError: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleError = jest.spyOn(console, 'error').mockImplementation(() => { });
+        spyConsoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
     });
 
     beforeEach(function () {
         logger = new Logger({ scope: 'SCOPE', debug: false });
         spyConsoleError.mockClear();
     });
-    
+
     it('Should print an error log text "Errore"', function () {
         logger.error('Errore');
         const expected = COLOUR_PRIMARY.bold('[ERROR]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Errore');

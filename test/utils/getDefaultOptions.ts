@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import * as path from 'path';
 import { Chalk } from 'chalk';
-import rewire = require('rewire');
+import rewire from 'rewire';
 
 import { InternalOptions } from '@src/types/options/index.js';
 import { colour } from '@src/utils/colour.js';

@@ -4,11 +4,12 @@ import { getDefaultColors } from '@test/utils/getDefaultOptions.js';
 const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('info');
 
 describe('Test Logger class setOptions method', function () {
-    let spyConsoleDebug: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>, spyConsoleLog: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
+    let spyConsoleDebug: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>,
+        spyConsoleLog: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleDebug = jest.spyOn(console, 'debug').mockImplementation(() => { });
-        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => { });
+        spyConsoleDebug = jest.spyOn(console, 'debug').mockImplementation(() => {});
+        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
     });
 
     beforeEach(function () {
@@ -39,15 +40,13 @@ describe('Test Logger class setOptions method', function () {
         logger.setOptions({ scope: null });
         logger.info('Altra informazione');
 
+        expect(spyConsoleLog).toHaveBeenCalledWith(COLOUR_PRIMARY.bold('[INFO]') + COLOUR_SECONDARY(' Informazione'));
         expect(spyConsoleLog).toHaveBeenCalledWith(
-            COLOUR_PRIMARY.bold('[INFO]') + COLOUR_SECONDARY(' Informazione')
-            );
-            expect(spyConsoleLog).toHaveBeenCalledWith(
-                COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {FIRST}') + COLOUR_SECONDARY(' Informazione')
-            );
-            expect(spyConsoleLog).toHaveBeenCalledWith(
-                COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {SECOND}') + COLOUR_SECONDARY(' Informazione')
-            );
+            COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {FIRST}') + COLOUR_SECONDARY(' Informazione')
+        );
+        expect(spyConsoleLog).toHaveBeenCalledWith(
+            COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {SECOND}') + COLOUR_SECONDARY(' Informazione')
+        );
         expect(spyConsoleLog).toHaveBeenCalledWith(
             COLOUR_PRIMARY.bold('[INFO]') + COLOUR_SECONDARY(' Altra informazione')
         );

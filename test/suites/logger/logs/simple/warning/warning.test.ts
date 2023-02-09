@@ -8,7 +8,7 @@ describe('Test warning method', function () {
     let spyConsoleWarn: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleWarn = jest.spyOn(console, 'warn').mockImplementation(() => { });
+        spyConsoleWarn = jest.spyOn(console, 'warn').mockImplementation(() => {});
     });
 
     beforeEach(function () {

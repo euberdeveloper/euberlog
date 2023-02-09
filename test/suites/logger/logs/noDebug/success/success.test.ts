@@ -8,7 +8,7 @@ describe('Test success method', function () {
     let spyConsoleLog: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => { });
+        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
     });
 
     beforeEach(function () {
@@ -18,15 +18,13 @@ describe('Test success method', function () {
 
     it('Should print a success log text "Successo"', function () {
         logger.success('Successo');
-        const expected =
-            COLOUR_PRIMARY.bold('[SUCCESS]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Successo');
+        const expected = COLOUR_PRIMARY.bold('[SUCCESS]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Successo');
         expect(spyConsoleLog).toHaveBeenCalledWith(expected);
     });
 
     it('Should print a success log text "Erfolg"', function () {
         logger.success('Erfolg');
-        const expected =
-            COLOUR_PRIMARY.bold('[SUCCESS]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Erfolg');
+        const expected = COLOUR_PRIMARY.bold('[SUCCESS]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Erfolg');
         expect(spyConsoleLog).toHaveBeenCalledWith(expected);
     });
 

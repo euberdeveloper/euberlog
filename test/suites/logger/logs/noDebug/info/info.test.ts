@@ -8,7 +8,7 @@ describe('Test info method', function () {
     let spyConsoleLog: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => { });
+        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
     });
 
     beforeEach(function () {
@@ -18,8 +18,7 @@ describe('Test info method', function () {
 
     it('Should print an info log text "Informazione"', function () {
         logger.info('Informazione');
-        const expected =
-            COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Informazione');
+        const expected = COLOUR_PRIMARY.bold('[INFO]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Informazione');
         expect(spyConsoleLog).toHaveBeenCalledWith(expected);
     });
 
@@ -42,4 +41,3 @@ describe('Test info method', function () {
         spyConsoleLog.mockRestore();
     });
 });
-

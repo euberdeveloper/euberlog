@@ -8,7 +8,7 @@ describe('Test warning method', function () {
     let spyConsoleWarn: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleWarn = jest.spyOn(console, 'warn').mockImplementation(() => { });
+        spyConsoleWarn = jest.spyOn(console, 'warn').mockImplementation(() => {});
     });
 
     beforeEach(function () {
@@ -25,8 +25,7 @@ describe('Test warning method', function () {
 
     it('Should print a warning log text "Achtung"', function () {
         logger.warning('Achtung');
-        const expected =
-            COLOUR_PRIMARY.bold('[WARNING]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Achtung');
+        const expected = COLOUR_PRIMARY.bold('[WARNING]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Achtung');
         expect(spyConsoleWarn).toHaveBeenCalledWith(expected);
     });
 
@@ -43,4 +42,3 @@ describe('Test warning method', function () {
         spyConsoleWarn.mockRestore();
     });
 });
-

@@ -8,7 +8,7 @@ describe('Test error method', function () {
     let spyConsoleError: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleError = jest.spyOn(console, 'error').mockImplementation(() => { });
+        spyConsoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
     });
 
     beforeEach(function () {

@@ -8,7 +8,7 @@ describe('Test debug method', function () {
     let spyConsoleDebug: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleDebug = jest.spyOn(console, 'debug').mockImplementation(() => { });
+        spyConsoleDebug = jest.spyOn(console, 'debug').mockImplementation(() => {});
     });
 
     beforeEach(function () {
@@ -24,8 +24,7 @@ describe('Test debug method', function () {
 
     it('Should print a debug log text "Debuggen"', function () {
         logger.debug('Debuggen');
-        const expected =
-            COLOUR_PRIMARY.bold('[DEBUG]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Debuggen');
+        const expected = COLOUR_PRIMARY.bold('[DEBUG]') + COLOUR_PRIMARY(' {SCOPE}') + COLOUR_SECONDARY(' Debuggen');
         expect(spyConsoleDebug).toHaveBeenCalledWith(expected);
     });
 

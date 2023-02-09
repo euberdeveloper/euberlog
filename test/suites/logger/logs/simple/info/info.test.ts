@@ -8,7 +8,7 @@ describe('Test info method', function () {
     let spyConsoleLog: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => { });
+        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
     });
 
     beforeEach(function () {

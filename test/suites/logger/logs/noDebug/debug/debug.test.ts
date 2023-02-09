@@ -5,7 +5,7 @@ describe('Test debug method', function () {
     let spyConsoleDebug: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
 
     beforeAll(function () {
-        spyConsoleDebug = jest.spyOn(console, 'debug').mockImplementation(() => { });
+        spyConsoleDebug = jest.spyOn(console, 'debug').mockImplementation(() => {});
     });
 
     beforeEach(function () {
