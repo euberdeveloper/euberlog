@@ -9,7 +9,7 @@ async function buildModule() {
         bundle: true,
         minify: true,
         treeShaking: true,
-        external: packageJson.dependencies ?? []
+        external: packageJson.dependencies ? Object.keys(packageJson.dependencies) : []
     };
 
     await build({
