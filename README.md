@@ -132,7 +132,7 @@ The documentation for development site is: [euberlog dev documentation](https://
 
 ### Logger
 
- The logger class, its instances will be the euber loggers.
+The logger class, its instances will be the euber loggers.
 
 **Syntax:**
 
@@ -205,7 +205,7 @@ There is a default export consisting in an instance of `Logger` with default opt
 
 To build the module make sure you have the dev dependencies installed.
 
-The project is written in `Typescript`, bundled with `Webpack` and linted with `ESLint`.
+The project is written in `Typescript`, bundled with `EsBuild` and linted with `ESLint`.
 
 ### Lint
 
@@ -228,7 +228,7 @@ There are also the `:source` and `:test` suffix after `lint` in order to lint on
 To transpile both the source and the test code:
 
 ```bash
-$ npm run transpile
+$ npm run transpile:all
 ```
 
 The `source` and the `test` folders will be transpiled in the `dist` folder. Also the `type declarations` will be generated.
@@ -250,18 +250,20 @@ After having transpiled the code, run:
 $ npm test
 ```
 
-in order to run the tests with `mocha`.
+in order to run the tests with `jest`.
 
 If a coverage report is to be generated, run:
 
 ```bash
-$ npm run nyc
+$ npm run cover:generate
 ```
 
 ### Bundle
+
+The bundler bundles both a `commonjs` and an `esm` version of the module. Also a `dts` file is generated, via `dts-bundle-generator`.
 
 ```bash
 $ npm run bundle
 ```
 
-The `source` folder will be compiled in the `bundled` folder. It will contain the bundled `index.js` and `index.d.ts` files.
+The `source` folder will be compiled in the `bundled` folder. It will contain the bundled `index.js`, `index.esm.js` and `index.d.ts` files.
