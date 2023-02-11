@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { Chalk } from 'chalk';
+import { ChalkInstance } from 'chalk';
 
 import { colour } from '@src/utils/colour.js';
 import { DEFAULT_OPTIONS } from '@src/utils/options.js';
 
-export function getDefaultColors(type: string): { COLOUR_PRIMARY: Chalk; COLOUR_SECONDARY: Chalk } {
+export function getDefaultColors(type: string): { COLOUR_PRIMARY: ChalkInstance; COLOUR_SECONDARY: ChalkInstance } {
     return {
         COLOUR_PRIMARY: colour(DEFAULT_OPTIONS.palette.primary[type]),
         COLOUR_SECONDARY: colour(DEFAULT_OPTIONS.palette.secondary[type])

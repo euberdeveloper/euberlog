@@ -22,10 +22,14 @@ const config: Config.InitialOptions = {
         '^.+\\.tsx?$': ['ts-jest', {
             tsconfig: './tsconfig.json',
             useEsm: true
-        }]
+        }],
+        'node_modules/variables/.+\\.(j|t)sx?$': ['ts-jest', {
+            tsconfig: './tsconfig.json',
+            useEsm: true
+        }],
     },
     coverageProvider: 'v8',
     moduleNameMapper: manageMapper(pathsToModuleNameMapper(tsconfigJson.compilerOptions.paths, { prefix: '<rootDir>/' }) as Record<string, string>),
-    transformIgnorePatterns: ['<rootDir>/node_modules/']
+    transformIgnorePatterns: ['<rootDir>/node_modules/', "node_modules/(?!variables/.*)"]
 };
 export default config;
