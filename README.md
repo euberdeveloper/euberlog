@@ -267,3 +267,5 @@ $ npm run bundle
 ```
 
 The `source` folder will be compiled in the `bundled` folder. It will contain the bundled `index.js`, `index.esm.js` and `index.d.ts` files.
+
+Note: since `chalk` is only an esm, for the commonjs version it is bundled within the module itself.
