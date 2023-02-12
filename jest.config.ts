@@ -17,7 +17,7 @@ function manageMapper(mapper: Record<string, string>): Record<string, string> {
 function getNodeModulesWithESMPatternsToTransform(modules: string[]): Record<string, string> {
     return modules.reduce((acc, module) => ({
         ...acc,
-        [`node_modules/${module}/.+\\.(j|t)sx?$`]: 'jest-esm-transformer-2'
+        [`node_modules/${module}/.+\\.(j|t)sx?$`]: 'babel-jest'
     }), {});
 };
 function getNodeModulesWithESMTransformIgnorePattern(modules: string[]): string {
