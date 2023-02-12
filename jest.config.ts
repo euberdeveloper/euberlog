@@ -14,6 +14,18 @@ function manageMapper(mapper: Record<string, string>): Record<string, string> {
     return newMapper;
 }
 
+function getNodeModulesWithESMPatternsToTransform(modules: string[]): Record<string, string> {
+    return modules.reduce((acc, module) => ({
+        ...acc,
+        [`node_modules/${module}/.+\\.(j|t)sx?$`]: 'jest-esm-transformer-2'
+    }), {});
+};
+function getNodeModulesWithESMTransformIgnorePattern(modules: string[]): string {
+    return `<rootDir>/node_modules/${modules.map(module => `(?!${module}/.*)`).join('')}`;
+}
+
+const nodeModulesWithESM = ['chalk'];
+
 const config: Config.InitialOptions = {
     preset: 'ts-jest/presets/default-esm',
     testEnvironment: 'node',
@@ -23,13 +35,10 @@ const config: Config.InitialOptions = {
             tsconfig: './tsconfig.json',
             useEsm: true
         }],
-        'node_modules/variables/.+\\.(j|t)sx?$': ['ts-jest', {
-            tsconfig: './tsconfig.json',
-            useEsm: true
-        }],
+        ...getNodeModulesWithESMPatternsToTransform(nodeModulesWithESM)
     },
     coverageProvider: 'v8',
     moduleNameMapper: manageMapper(pathsToModuleNameMapper(tsconfigJson.compilerOptions.paths, { prefix: '<rootDir>/' }) as Record<string, string>),
-    transformIgnorePatterns: ['<rootDir>/node_modules/', "node_modules/(?!variables/.*)"]
+    transformIgnorePatterns: [ getNodeModulesWithESMTransformIgnorePattern(nodeModulesWithESM)]
 };
 export default config;
