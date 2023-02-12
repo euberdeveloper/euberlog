@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import colorConvert from 'color-convert';
 
 import { colour } from '@src/utils/colour.js';
 
@@ -83,7 +84,7 @@ describe('Test @/utils/colour', function () {
     });
 
     it('Should return the right chalk function for the css keyword `orange`', function () {
-        const expected = chalk.keyword('orange');
+        const expected = chalk.rgb(...colorConvert.keyword.rgb('orange'));
         const result = colour('orange');
 
         expect(result.toString()).toEqual(expected.toString());

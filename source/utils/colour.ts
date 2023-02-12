@@ -1,4 +1,5 @@
-import chalk from 'chalk';
+import chalk, { ChalkInstance } from 'chalk';
+import colorConvert from 'color-convert';
 
 /**
  * The colours that are direct functions of chalk (chalk.[colour]() is a valid function).
@@ -28,7 +29,7 @@ const COLOURS = new Set([
  * Given a colour, returns the corrisponding chalk function.
  * @param colour The colour as a direct colour (such as 'black'), an hex colour (such as '#fafafa'), an RGB colour (such as '(255,255,255)') or a css colour (such as 'orange').
  */
-export function colour(colour: string): chalk.Chalk {
+export function colour(colour: string): ChalkInstance {
     if (/^#([\da-f]{3}){1,2}$/i.test(colour)) {
         return chalk.hex(colour);
     }
@@ -43,5 +44,5 @@ export function colour(colour: string): chalk.Chalk {
         return chalk[colour];
     }
 
-    return chalk.keyword(colour);
+    return chalk.rgb(...colorConvert.keyword.rgb(colour as any));
 }
