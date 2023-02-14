@@ -16,7 +16,7 @@ async function buildModule() {
         bundle: true,
         minify: true,
         treeShaking: true,
-
+        sourcemap: true
     };
 
     await build({
