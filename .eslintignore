@@ -1,4 +1,5 @@
-.eslintrc.js
-typedoc.js
-typedoc.dev.js
-webpack.config.js
+.eslintrc.cjs
+.prettier.cjs
+typedoc.cjs
+typedoc.dev.cjs
+build.mjs
