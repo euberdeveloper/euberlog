@@ -203,7 +203,67 @@ There is a default export consisting in an instance of `Logger` with default opt
 
 ## Project structure
 
-[//]: # (dree)
+[//]: # (dree - BEGIN)
+Made with [dree](https://github.com/marketplace/actions/ga-dree)
+
+
+```
+euberlog
+ ├── .eslintignore
+ ├── .eslintrc.cjs
+ ├── .prettierrc.cjs
+ ├── LICENSE
+ ├── README.md
+ ├── babel.config.cjs
+ ├── build.mjs
+ ├─> docs
+ │   ├─> assets
+ │   │   ├── br_and_hr.png
+ │   │   ├── simple.png
+ │   │   ├── with_options.png
+ │   │   └── with_scope.png
+ │   └─> tree
+ │       └── dree.config.json
+ ├── jest.config.ts
+ ├── package-lock.json
+ ├── package.json
+ ├─> source
+ │   ├── index.ts
+ │   ├── tsconfig.json
+ │   ├─> types
+ │   │   ├─> deep-partial
+ │   │   │   └── index.ts
+ │   │   ├── index.ts
+ │   │   ├─> options
+ │   │   │   └── index.ts
+ │   │   └─> palette
+ │   │       └── index.ts
+ │   └─> utils
+ │       ├── colour.ts
+ │       ├── logger.ts
+ │       └── options.ts
+ ├─> test
+ │   ├── .eslintrc.cjs
+ │   ├─> suites
+ │   │   ├─> colour
+ │   │   │   └── colour.test.ts
+ │   │   ├─> handleOptions
+ │   │   │   └── handleOptions.test.ts
+ │   │   └─> logger
+ │   │       ├─> constructor
+ │   │       │   └── constructor.test.ts
+ │   │       ├─> defaultInstance
+ │   │       │   └── defaultInstance.test.ts
+ │   │       ├─> logs
+ │   │       └─> setOptions
+ │   │           └── setOptions.test.ts
+ │   └─> utils
+ │       └── getDefaultOptions.ts
+ ├── tsconfig.json
+ ├── typedoc.cjs
+ └── typedoc.dev.cjs
+```
+[//]: # (dree - END)
 
 ## Development
 
