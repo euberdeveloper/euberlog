@@ -1,15 +1,20 @@
 {
   "name": "euberlog",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "description": "A beautiful nodejs logger",
-  "types": "./bundled/index.d.ts",
+  "types": "./bundled/commonjs/index.d.ts",
   "main": "./bundled/commonjs/index.js",
   "module": "./bundled/esm/index.esm.js",
   "exports": {
     ".": {
-      "type": "./bundled/index.d.ts",
-      "require": "./bundled/commonjs/index.js",
-      "import": "./bundled/esm/index.esm.js"
+      "require": {
+        "default": "./bundled/commonjs/index.js",
+        "types": "./bundled/commonjs/index.d.ts"
+      },
+      "import": {
+        "default": "./bundled/esm/index.esm.js",
+        "types": "./bundled/esm/index.d.ts"
+      }
     }
   },
   "type": "module",
@@ -31,7 +36,8 @@
     "pretranspile:all": "npm run clean",
     "transpile:all": "tsc",
     "bundle:esm": "node build.mjs",
-    "bundle:dts": "dts-bundle-generator -o bundled/index.d.ts --project source/tsconfig.json source/index.ts",
+    "bundle:dts": "dts-bundle-generator -o bundled/commonjs/index.d.ts --project source/tsconfig.json source/index.ts",
+    "postbundle:dts": "cp bundled/commonjs/index.d.ts  bundled/esm/index.d.ts",
     "prebundle": "npm run clean",
     "bundle": "npm run bundle:esm && npm run bundle:dts",
     "lint:source": "eslint source --ext ts --format codeframe",
