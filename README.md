@@ -218,10 +218,6 @@ euberlog
  ├── build.mjs
  ├─> docs
  │   ├─> assets
- │   │   ├── br_and_hr.png
- │   │   ├── simple.png
- │   │   ├── with_options.png
- │   │   └── with_scope.png
  │   └─> tree
  │       └── dree.config.json
  ├── jest.config.ts
