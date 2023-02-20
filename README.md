@@ -201,6 +201,10 @@ const DEFAULT_OPTIONS = {
 
 There is a default export consisting in an instance of `Logger` with default options
 
+## Project structure
+
+[//]: # (dree)
+
 ## Development
 
 To build the module make sure you have the dev dependencies installed.
