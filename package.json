@@ -1,12 +1,13 @@
 {
   "name": "euberlog",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "A beautiful nodejs logger",
   "types": "./bundled/index.d.ts",
   "main": "./bundled/commonjs/index.js",
   "module": "./bundled/esm/index.esm.js",
   "exports": {
     ".": {
+      "type": "./bundled/index.d.ts",
       "require": "./bundled/commonjs/index.js",
       "import": "./bundled/esm/index.esm.js"
     }
