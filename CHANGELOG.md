@@ -1,5 +1,7 @@
 
 
+## [2.5.1](https://github.com/euberdeveloper/euberlog/compare/v2.5.0...v2.5.1) (2023-03-09)
+
 # 2.5.0 (2023-03-09)
 
 
