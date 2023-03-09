@@ -219,6 +219,8 @@ euberlog
  │       └── test.yml
  ├── .gitignore
  ├── .prettierrc.cjs
+ ├── .release-it.json
+ ├── CHANGELOG.md
  ├── LICENSE
  ├── README.md
  ├── babel.config.cjs
