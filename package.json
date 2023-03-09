@@ -34,7 +34,7 @@
     "transpile:all": "tsc",
     "bundle:esm": "node build.mjs",
     "bundle:dts": "dts-bundle-generator -o bundled/commonjs/index.d.ts --project source/tsconfig.json source/index.ts",
-    "postbundle:dts": "cp bundled/commonjs/index.d.ts  bundled/esm/index.d.ts",
+    "postbundle:dts": "cp bundled/commonjs/index.d.ts bundled/esm/index.d.ts",
     "prebundle": "npm run clean",
     "bundle": "npm run bundle:esm && npm run bundle:dts",
     "lint:source": "eslint source --ext ts --format codeframe",
