@@ -1,13 +1,13 @@
 {
     "exclude": [ 
-        "node_modules",
-        ".git",
-        "coverage",
-        "bundled/",
-        "dist/",
-        "docs/assets/",
-        "docs/documentation/html/",
-        "docs/documentation/html-dev/",
-        "test/suites/logger/logs/"
+        "/node_modules",
+        "/.git",
+        "/coverage",
+        "/bundled/",
+        "/dist/",
+        "/docs/assets/",
+        "/docs/documentation/html/",
+        "/docs/documentation/html-dev/",
+        "/test/suites/logger/logs/"
     ]
 }
