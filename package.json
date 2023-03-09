@@ -21,6 +21,7 @@
   "files": [
     "package.json",
     "bundled",
+    "CHANGELOG.md",
     "README.md",
     "LICENSE"
   ],
