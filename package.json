@@ -51,7 +51,8 @@
     "cover:coveralls": "cat ./coverage/lcov.info | coveralls",
     "cover:codecov": "codecov",
     "cover": "npm run cover:generate && npm run cover:coveralls && npm run cover:codecov",
-    "prepublishOnly": "npm run bundle"
+    "prepublishOnly": "npm run bundle",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
