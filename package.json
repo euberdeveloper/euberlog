@@ -1,6 +1,6 @@
 {
   "name": "euberlog",
-  "version": "2.4.8",
+  "version": "2.4.9",
   "description": "A beautiful nodejs logger",
   "types": "./bundled/commonjs/index.d.ts",
   "main": "./bundled/commonjs/index.js",
@@ -67,7 +67,7 @@
   "bugs": {
     "url": "https://github.com/euberdeveloper/euberlog/issues"
   },
-  "homepage": "https://github.com/euberdeveloper/euberlog#readme",
+  "homepage": "https://euberlog.euber.dev",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
