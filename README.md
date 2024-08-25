@@ -359,7 +359,7 @@ After having transpiled the code, run:
 $ npm test
 ```
 
-in order to run the tests with `jest`.
+in order to run the tests with `vitest run`.
 
 If a coverage report is to be generated, run:
 
