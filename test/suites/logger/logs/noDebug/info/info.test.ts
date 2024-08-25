@@ -1,14 +1,16 @@
 import { Logger } from '@src/utils/logger.js';
 
+import { MockInstance } from 'vitest';
+
 import { getDefaultColors } from '@test/utils/getDefaultOptions.js';
 const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('info');
 
 describe('Test info method', function () {
     let logger: Logger;
-    let spyConsoleLog: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
+    let spyConsoleLog: MockInstance<(message?: any, ...optionalParams: any[]) => void>;
 
     beforeAll(function () {
-        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
+        spyConsoleLog = vi.spyOn(console, 'log').mockImplementation(() => {});
     });
 
     beforeEach(function () {

@@ -1,14 +1,16 @@
 import { getDefaultColors } from '@test/utils/getDefaultOptions.js';
 const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('warning');
 
+import { MockInstance } from 'vitest';
+
 import { Logger } from '@src/utils/logger.js';
 
 describe('Test warning method', function () {
     let logger: Logger;
-    let spyConsoleWarn: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
+    let spyConsoleWarn: MockInstance<(message?: any, ...optionalParams: any[]) => void>;
 
     beforeAll(function () {
-        spyConsoleWarn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+        spyConsoleWarn = vi.spyOn(console, 'warn').mockImplementation(() => {});
     });
 
     beforeEach(function () {

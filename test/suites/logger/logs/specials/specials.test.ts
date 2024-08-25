@@ -1,11 +1,13 @@
 import { Logger } from '@src/utils/logger.js';
 import { getHrPattern } from '@test/utils/getDefaultOptions.js';
 
+import { MockInstance } from 'vitest';
+
 describe('Test Logger br and hr methods', function () {
-    let spyConsoleLog: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
+    let spyConsoleLog: MockInstance<(message?: any, ...optionalParams: any[]) => void>;
 
     beforeAll(function () {
-        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
+        spyConsoleLog = vi.spyOn(console, 'log').mockImplementation(() => {});
     });
 
     beforeEach(function () {

@@ -1,11 +1,12 @@
 import { Logger } from '@src/utils/logger.js';
+import { MockInstance } from 'vitest';
 
 describe('Test debug method', function () {
     let logger: Logger;
-    let spyConsoleDebug: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
+    let spyConsoleDebug: MockInstance<(message?: any, ...optionalParams: any[]) => void>;
 
     beforeAll(function () {
-        spyConsoleDebug = jest.spyOn(console, 'debug').mockImplementation(() => {});
+        spyConsoleDebug = vi.spyOn(console, 'debug').mockImplementation(() => {});
     });
 
     beforeEach(function () {

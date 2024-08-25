@@ -2,10 +2,11 @@
     "compilerOptions": {
         "moduleResolution": "Node16",
         "module": "Node16",
-        "target": "ES2015",
+        "target": "ES2018",
         "lib": [
             "ES2022"
         ],
+        "types": ["vitest/globals"],
         "resolveJsonModule": true,
         "strictNullChecks": true,
         "downlevelIteration": true,

@@ -1,15 +1,18 @@
 import { Logger } from '@src/utils/logger.js';
 
+import { MockInstance } from 'vitest';
+
 import { getDefaultColors } from '@test/utils/getDefaultOptions.js';
 const { COLOUR_PRIMARY, COLOUR_SECONDARY } = getDefaultColors('info');
 
+
 describe('Test Logger class setOptions method', function () {
-    let spyConsoleDebug: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>,
-        spyConsoleLog: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>;
+    let spyConsoleDebug: MockInstance<(message?: any, ...optionalParams: any[]) => void>,
+        spyConsoleLog: MockInstance<(message?: any, ...optionalParams: any[]) => void>;
 
     beforeAll(function () {
-        spyConsoleDebug = jest.spyOn(console, 'debug').mockImplementation(() => {});
-        spyConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
+        spyConsoleDebug = vi.spyOn(console, 'debug').mockImplementation(() => {});
+        spyConsoleLog = vi.spyOn(console, 'log').mockImplementation(() => {});
     });
 
     beforeEach(function () {
