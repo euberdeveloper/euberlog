@@ -8,12 +8,12 @@
   "exports": {
     ".": {
       "require": {
-        "default": "./bundled/commonjs/index.js",
-        "types": "./bundled/commonjs/index.d.ts"
+        "types": "./bundled/commonjs/index.d.ts",
+        "default": "./bundled/commonjs/index.js"
       },
       "import": {
-        "default": "./bundled/esm/index.esm.js",
-        "types": "./bundled/esm/index.d.ts"
+        "types": "./bundled/esm/index.d.ts",
+        "default": "./bundled/esm/index.esm.js"
       }
     }
   },

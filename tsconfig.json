@@ -1,12 +1,11 @@
 {
     "compilerOptions": {
-        "moduleResolution": "Node16",
-        "module": "Node16",
-        "target": "ES2018",
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "target": "ESNext",
         "lib": [
-            "ES2022"
+            "ESNext"
         ],
-        "types": ["vitest/globals"],
         "resolveJsonModule": true,
         "strictNullChecks": true,
         "downlevelIteration": true,
