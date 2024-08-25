@@ -234,9 +234,8 @@ euberlog
  │   │   └── with_scope.png
  │   └─> tree
  │       └── dree.config.json
- ├── jest.config.ts
- ├── package-lock.json
  ├── package.json
+ ├── pnpm-lock.yaml
  ├─> source
  │   ├── index.ts
  │   ├── tsconfig.json
@@ -305,8 +304,10 @@ euberlog
  │   └─> utils
  │       └── getDefaultOptions.ts
  ├── tsconfig.json
+ ├── tsconfig.test.json
  ├── typedoc.cjs
- └── typedoc.dev.cjs
+ ├── typedoc.dev.cjs
+ └── vitest.config.ts
 ```
 [//]: # (dree - END)
 
