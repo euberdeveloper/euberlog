@@ -9,6 +9,7 @@ module.exports = {
     sidebarLinks: {
         'DEV docs': 'https://euberlog-dev.euber.dev'
     },
+    plugin: ['typedoc-plugin-ga'],
     excludeExternals: true,
     includeVersion: true,
     tsconfig: 'source/tsconfig.json',
